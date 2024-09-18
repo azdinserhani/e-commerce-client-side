@@ -1,0 +1,45 @@
+.categoryCard {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  img {
+    transition: 2s all ease;
+  }
+  &:hover {
+    img {
+      scale: 1.2;
+    }
+  }
+
+  .info {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    span {
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+    }
+    p {
+      font-weight: bold;
+      font-size: 30px;
+      color: white;
+      text-transform: uppercase;
+    }
+    button {
+      text-transform: uppercase;
+      padding: 10px;
+      background-color: white;
+      border: none;
+      font-size: 20px;
+      border-radius: 3px;
+      border: 2px solid black;
+      cursor: pointer;
+    }
+  }
+}

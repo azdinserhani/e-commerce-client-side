@@ -1,0 +1,48 @@
+.sidebar {
+  display: flex;
+  height: 800px;
+  flex-direction: column;
+  gap: 30px;
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2{
+      text-transform: uppercase;
+    }
+    a {
+      padding-left: 10px;
+      color: #00000080;
+      cursor: pointer;
+      transition: 0.5s all ease;
+      &:hover {
+        color: black;
+        margin-left: 10px;
+      }
+    }
+    input {
+      appearance: none;
+      background: #00000028;
+      height: 10px;
+      border-radius: 5px;
+
+      cursor: pointer;
+      width: 50%;
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        background-color: black;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+      }
+    }
+    p{
+      color: #00000080;
+      span{
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+}

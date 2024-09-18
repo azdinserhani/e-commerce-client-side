@@ -1,0 +1,102 @@
+.categories {
+  height: auto;
+  margin-bottom: 100px;
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .container {
+      height: 500px;
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://img.freepik.com/free-photo/summer-creative-workplace-with-blank-screen_23-2147833161.jpg?t=st=1725191313~exp=1725194913~hmac=a346106051e35dc736978ea40a8bdd68d5bc022a874aba8095053f5474df0b43&w=996")
+          center;
+      background-size: cover;
+      margin-bottom: 30px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      h1 {
+        color: white;
+        font-size: 50px;
+      }
+      .CategoriesItem {
+        display: flex;
+        gap: 20px;
+
+        .item {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          transition: 0.5s all ease;
+          cursor: pointer;
+          img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            overflow: hidden;
+          }
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+    }
+    .categoryContainer {
+      display: flex;
+      width: 100%;
+
+      gap: 10px;
+      .sideBar {
+        width: 20%;
+      }
+      .mainContainer {
+        // padding: 20px;
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        .top {
+          width: 100px;
+          .select {
+            height: 50px;
+          }
+          p {
+            font-size: 20px;
+            font-weight: 500;
+          }
+          select {
+            padding: 5px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid lightgray;
+            transition: 1s all ease;
+
+            option {
+              background-color: transparent;
+              border: none;
+            }
+          }
+        }
+        .products {
+          // margin-top: 50px;
+          display: grid;
+          gap: 10px;
+          min-width: 100%;
+          // flex-wrap: wrap;
+          grid-template-columns: repeat(3,auto);
+        
+          // justify-content: center;
+        }
+      }
+    }
+  }
+}

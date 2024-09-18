@@ -1,0 +1,46 @@
+.footer {
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      hr {
+        width: 10%;
+      }
+      a{
+        color: #837878bf;
+        cursor: pointer;
+        transition: 0.5s all  ease;
+        &:hover{
+            color: black;
+            transform: translateX(10px);
+        }
+      }
+      .icons{
+        display: flex;
+        gap: 15px;
+        .icon{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s all ease;
+            cursor: pointer;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+      }
+    }
+  }
+}

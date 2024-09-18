@@ -1,0 +1,53 @@
+.navbar {
+  height: 70px;
+  background-color: #d7d7d7;
+ 
+  .wrapper {
+    height: 100%;
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    .left {
+      flex: 1;
+
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .centre {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 20px;
+      .select {
+        width: 140px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 39px;
+        border: 1px black solid;
+        background-color: transparent;
+        select {
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+      .icon{
+        cursor: pointer;
+      }
+    }
+  }
+}

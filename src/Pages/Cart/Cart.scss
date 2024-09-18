@@ -1,0 +1,157 @@
+.cart {
+  margin: 50px 0px;
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .head{
+      display: flex;
+      gap: 60%;
+      align-items: center;
+      p{
+        cursor: pointer;
+        text-decoration: underline;
+        &:hover{
+          color: gray;
+        }
+      }
+    }
+    .container {
+      display: flex;
+      gap: 10px;
+      .left {
+        flex: 3;
+        .empty{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          span{
+          margin-left: 50px;
+          font-size: 20px;
+          text-align: center;
+        }
+        img{
+          height: 80px;
+          width: 80px;
+        }
+        }
+        
+        .card {
+          hr {
+            margin: 5px 0px;
+          }
+          .cardItem {
+            display: flex;
+            .left {
+              flex: 1;
+              display: flex;
+              gap: 5px;
+
+           
+              img {
+                height: 200px;
+                width: 150px;
+                object-fit: cover;
+                cursor: pointer;
+                transition: 1s all ease;
+                &:hover{
+                    scale: 0.9;
+                }
+              }
+              .productInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                p {
+                  font-weight: 500;
+                  span {
+                    color: gray;
+                  }
+                }
+              }
+            }
+            .centre {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              .count {
+                width: 50%;
+                display: flex;
+                height: 40px;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 10px;
+                border: 1px solid #00000066;
+                padding: 0px 10px;
+                span {
+                  font-size: 20px;
+                }
+                .icon {
+                  cursor: pointer;
+                }
+              }
+            }
+            .right {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              align-items: end;
+              h3{
+                font-size: 25px;
+              }
+              p {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        .card {
+          margin: 10px;
+          border: 1px solid gray;
+          border-radius: 10px;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          p{
+            font-size: 20px;
+            color: gray;
+            span{
+                font-weight: 500;
+                color: black;
+            }
+          }
+          button {
+            flex: 3;
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 15px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+            &:hover {
+              color: black;
+              background-color: white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

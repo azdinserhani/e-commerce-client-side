@@ -1,0 +1,17 @@
+.services{
+    .wrapper{
+        width: 1366px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0px;
+        .item{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+}

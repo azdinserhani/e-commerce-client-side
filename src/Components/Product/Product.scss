@@ -1,0 +1,75 @@
+.product {
+  min-width: 350px;
+  .card {
+
+    // margin-top: 100px;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+    .imgContainer {
+      height: 433px;
+      width: 100%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 1s ease all;
+      }
+    }
+    .options {
+      z-index: 100;
+    }
+    &:hover {
+      .options {
+        display: flex; /* Display options on hover */
+        opacity: 1; /* Set opacity to make it visible */
+        transform: translate(-50%, -30%); /* Slight move upwards */
+      }
+      img {
+        scale: 1.2;
+      }
+    }
+
+    .info {
+      transition: all 0.5s ease; /* Smooth transition for any changes */
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 66px;
+      gap: 10px;
+      p {
+        color: #969696;
+      }
+    }
+
+    .options {
+      display: flex;
+      opacity: 0;
+      gap: 10px;
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+
+      .opt {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s all ease;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}

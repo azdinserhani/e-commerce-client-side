@@ -1,0 +1,47 @@
+.newsLettre {
+  background-image: url("https://elecstore-store-newdemo.myshopify.com/cdn/shop/files/newletters-home1.jpg?v=1714806295&width=1920");
+  margin: 50px 0px;
+  height: 40vh;
+  background-size: cover;
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 100px;
+    .left {
+      display: flex;
+      height: 25%;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+      }
+    }
+    .right{
+        .inputContainer{
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            input{
+                padding: 10px;
+                border: none;
+                outline: none;
+            }
+            button{
+                padding: 10px;
+                border: none;
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+  }
+}
