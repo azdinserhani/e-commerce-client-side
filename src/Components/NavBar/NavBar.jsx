@@ -16,18 +16,10 @@ const NavBar = () => {
     <div className="navbar">
       <div className="wrapper">
         <div className="left">
-          <Link to={"/"}>
-            Home
-          </Link>
-          <Link to={"/categories"}>
-            Categories
-          </Link>
-          <Link>
-            About Us
-          </Link>
-          <Link>
-            Contact
-          </Link>
+          <Link to={"/"}>Home</Link>
+          <Link to={"/categories"}>Categories</Link>
+          <Link to={"/orders"}>My orders</Link>
+          <Link>Contact</Link>
         </div>
         <div className="centre">
           <h1>ElecAzdine</h1>

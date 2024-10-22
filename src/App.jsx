@@ -10,6 +10,7 @@ import ProductPage from "./Pages/ProductPage/ProductPage";
 import Cart from "./Pages/Cart/Cart";
 import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Order from "./Pages/Order/Order";
 function App() {
   const user = useSelector((stat) => stat.user.currentUser);
   const Layout = () => {
@@ -59,6 +60,10 @@ function App() {
         {
           path: "/cart",
           element: <Cart />,
+        },
+        {
+          path: "/orders",
+          element: <Order />,
         },
       ],
     },

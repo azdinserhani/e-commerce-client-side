@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 const Cart = () => {
   const key = import.meta.env.VITE_APP_STRIPE_KEY;
+  const user = useSelector((stat) => stat.user.currentUser);
 
   const dispatch = useDispatch();
   const cart = useSelector((stat) => stat.cart);
@@ -18,7 +19,7 @@ const Cart = () => {
   const handleClick = () => {
     dispatch(clearCart());
   };
- 
+
   const makeRequest = async () => {
     const stripe = await loadStripe(key);
     const body = {
@@ -30,6 +31,7 @@ const Cart = () => {
     const result = stripe.redirectToCheckout({
       sessionId: session.id,
     });
+    dispatch(clearCart());
   };
   return (
     <div className="cart">
@@ -103,17 +105,7 @@ const Cart = () => {
               <p>
                 Total: <span> ${cart.totalPrice.toFixed(2)}</span>
               </p>
-              {/* <StripeCheckout
-                name="ElecAzdine"
-                stripeKey={key}
-                description={`your total is ${cart.totalPrice}`}
-                amount={cart.totalPrice * 100}
-                shippingAddress
-                billingAddress
-                token={onToken}
-              > */}
               <button onClick={makeRequest}>Checkout</button>
-              {/* </StripeCheckout> */}
             </div>
           </div>
         </div>

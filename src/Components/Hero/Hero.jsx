@@ -4,6 +4,7 @@ import hero2 from "../../../public/hero2.webp";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { useState } from "react";
+import { motion } from "framer-motion";
 const slide = [
   {
     id: 1,
@@ -21,7 +22,7 @@ const slide = [
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   return (
     <div className="hero">
       <div
@@ -31,14 +32,36 @@ const Hero = () => {
         {slide.map((item) => {
           return (
             <div className="slide">
-              <div className="left">
+              <motion.div
+                className="left"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    type: "spring",
+                    duration: 1,
+                  },
+                }}
+              >
                 <h1>{item.tittle}</h1>
                 <p>{item.desc}</p>
                 <button>shop now</button>
-              </div>
-              <div className="right">
+              </motion.div>
+              <motion.div
+                className="right"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    type: "spring",
+                    duration: 1,
+                  },
+                }}
+              >
                 <img src={item.img} alt="" />
-              </div>
+              </motion.div>
             </div>
           );
         })}
@@ -46,17 +69,13 @@ const Hero = () => {
       <div className="icons">
         <div
           className="arrowLeft"
-          onClick={() =>
-            setCurrentSlide(currentSlide === 1 ? 0 : 1)
-          }
+          onClick={() => setCurrentSlide(currentSlide === 1 ? 0 : 1)}
         >
           <ArrowBackIosNewOutlinedIcon />
         </div>
         <div
           className="arrowRight"
-          onClick={() =>
-            setCurrentSlide(currentSlide === 0 ? 1 : 0)
-          }
+          onClick={() => setCurrentSlide(currentSlide === 0 ? 1 : 0)}
         >
           <ArrowForwardIosOutlinedIcon />
         </div>

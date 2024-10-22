@@ -3,11 +3,22 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 const Product = ({ item }) => {
   const navigation = useNavigate();
   return (
-    <div className="product">
-      <div className="card">
+    <motion.div className="product">
+      <motion.div
+        className="card"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: "spring",
+          },
+        }}
+      >
         <div className="imgContainer">
           <img src={item.img} alt="" />
         </div>
@@ -29,8 +40,8 @@ const Product = ({ item }) => {
             <FavoriteBorderOutlinedIcon />
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

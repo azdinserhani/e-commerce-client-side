@@ -40,6 +40,12 @@
       border-radius: 3px;
       border: 2px solid black;
       cursor: pointer;
+      transition: all 0.6s ease;
+      &:hover{
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+      }
     }
   }
 }

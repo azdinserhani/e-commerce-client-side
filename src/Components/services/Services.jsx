@@ -1,5 +1,5 @@
 import "./Services.scss";
-
+import { motion } from "framer-motion";
 const data = [
   {
     id: 1,
@@ -83,16 +83,29 @@ const data = [
 const Services = () => {
   return (
     <div className="services">
-      <div className="wrapper">
-        {data.map((item) => {
+      <motion.div className="wrapper">
+        {data.map((item ,index) => {
           return (
-            <div className="item">
+            <motion.div
+              key={index}
+              className="item"
+              initial={{ opacity: 0, x: "200px" }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: index * 0.1,
+                  type: "spring",
+                  delayChildren: "1s",
+                },
+              }}
+            >
               {item.svg}
               <p>{item.desc}</p>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
