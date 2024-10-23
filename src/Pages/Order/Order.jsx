@@ -7,7 +7,6 @@ const Order = () => {
   const dispatch = useDispatch();
   const user = useSelector((stat) => stat.user.currentUser);
   const orders = useSelector((stat) => stat.orders.order);
-  console.log(orders);
 
   useEffect(() => {
     getAllOrders(dispatch, user.info._id);
@@ -15,9 +14,14 @@ const Order = () => {
   return (
     <div className="orderContainer">
       <h1>My Orders</h1>
-      {orders.map((item) => {
-        return <OrderCard item={item} />;
-      })}
+
+      {orders ? (
+        orders.map((item) => {
+          return <OrderCard item={item} />;
+        })
+      ) : (
+        <p>No order</p>
+      )}
     </div>
   );
 };

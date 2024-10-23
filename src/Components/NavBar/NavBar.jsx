@@ -45,7 +45,7 @@ const NavBar = () => {
           <div className="icon">
             <FavoriteBorderOutlinedIcon />
           </div>
-          <div className="icon" onClick={() => navigate("/cart")}>
+          <div className="iconCart" onClick={() => navigate("/cart")}>
             <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlinedIcon />
             </Badge>

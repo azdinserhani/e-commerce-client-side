@@ -1,9 +1,12 @@
+@import "../../Style.scss";
+
 .deal {
-  height: 50vh;
+  
   background-color: #f6f6f6;
   margin: 50px 0px;
   display: flex;
   align-items: center;
+
   .wrapper {
     width: 1366px;
     margin: auto;
@@ -11,14 +14,22 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-
+    @include mobile {
+      padding: 20px;
+      width: 100vw;
+      align-items: start;
+      flex-direction: column;
+      gap: 20px;
+      margin: 0;
+      overflow: hidden;
+    }
     .right {
       flex: 1;
       display: flex;
       justify-content: end;
       img {
-       
         height: 100%;
+        width: 100%;
         object-fit: cover;
       }
     }
@@ -49,13 +60,13 @@
         border-radius: 3px;
         border: 2px solid black;
         cursor: pointer;
-      transition: all 0.6s ease;
+        transition: all 0.6s ease;
 
-        &:hover{
-        background-color: black;
-        color: white;
-        border-radius: 5px;
-      }
+        &:hover {
+          background-color: black;
+          color: white;
+          border-radius: 5px;
+        }
       }
     }
   }

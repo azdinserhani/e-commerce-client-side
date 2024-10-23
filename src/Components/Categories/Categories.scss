@@ -1,10 +1,16 @@
-.categories{
-    height: 70vh;
-    .wrapper{
-        width: 1366px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+@import "../../Style.scss";
+
+.categories {
+  height: 70vh;
+  .wrapperCategories {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    
+    @include mobile {
+      margin: 0px;
+      width: 100vw;
+      flex-direction: column;
     }
+  }
 }

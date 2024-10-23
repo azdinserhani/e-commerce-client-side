@@ -1,18 +1,31 @@
-.services{
-    overflow: hidden;
-    .wrapper{
-        width: 1366px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        padding: 60px 0px;
-        .item{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            p{
-                font-size: 25px;
-            }
-        }
+@import "../../Style.scss";
+
+.services {
+  overflow: hidden;
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0px;
+    @include mobile {
+      width: 100vw;
+      gap: 20px;
+    
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include mobile {
+        flex-direction: column;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
+  }
 }

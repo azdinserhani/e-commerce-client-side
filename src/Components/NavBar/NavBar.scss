@@ -1,18 +1,26 @@
+@import "../../Style.scss";
+
 .navbar {
   height: 70px;
   background-color: #d7d7d7;
- 
+
   .wrapper {
     height: 100%;
     width: 1366px;
     margin: auto;
     display: flex;
+    @include mobile {
+      width: 100vw;
+      margin: 0;
+      padding: 20px;
+    }
     .left {
       flex: 1;
 
       display: flex;
       align-items: center;
       gap: 40px;
+
       a {
         text-decoration: none;
         color: black;
@@ -23,6 +31,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include mobile {
+        display: none;
+      }
     }
     .right {
       flex: 1;
@@ -44,9 +55,20 @@
           outline: none;
           background-color: transparent;
         }
+        @include mobile {
+          display: none;
+        }
       }
-      .icon{
+      .icon {
         cursor: pointer;
+        @include mobile {
+          display: none;
+        }
+      }
+      .iconCart {
+        @include mobile {
+          display: flex;
+        }
       }
     }
   }

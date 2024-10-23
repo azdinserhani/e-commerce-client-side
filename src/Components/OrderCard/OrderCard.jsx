@@ -60,7 +60,7 @@ const OrderCard = ({ item }) => {
         </div>
         <div className="total">
           <p>
-            Total : <span> ${item.totalAmount * 0.01}</span>
+            Total : <span> ${(item.totalAmount * 0.01).toFixed(2)}</span>
           </p>
         </div>
       </div>

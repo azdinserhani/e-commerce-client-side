@@ -1,3 +1,5 @@
+@import "../../Style.scss";
+
 .newsLettre {
   background-image: url("https://elecstore-store-newdemo.myshopify.com/cdn/shop/files/newletters-home1.jpg?v=1714806295&width=1920");
   margin: 50px 0px;
@@ -11,6 +13,10 @@
     justify-content: center;
     height: 100%;
     gap: 100px;
+    @include mobile {
+      width: 100vw;
+      flex-direction: column;
+    }
     .left {
       display: flex;
       height: 25%;
@@ -25,23 +31,23 @@
         color: white;
       }
     }
-    .right{
-        .inputContainer{
-            background-color: white;
-            border-radius: 4px;
-            overflow: hidden;
-            input{
-                padding: 10px;
-                border: none;
-                outline: none;
-            }
-            button{
-                padding: 10px;
-                border: none;
-                background-color: black;
-                color: white;
-            }
+    .right {
+      .inputContainer {
+        background-color: white;
+        border-radius: 4px;
+        overflow: hidden;
+        input {
+          padding: 10px;
+          border: none;
+          outline: none;
         }
+        button {
+          padding: 10px;
+          border: none;
+          background-color: black;
+          color: white;
+        }
+      }
     }
   }
 }

@@ -29,7 +29,7 @@ const data = [
 const Categories = () => {
   return (
     <div className="categories">
-      <div className="wrapper">
+      <div className="wrapperCategories">
         {data.map((item) => {
           return <CategoryCard item={item} />;
         })}

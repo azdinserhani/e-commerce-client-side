@@ -48,25 +48,25 @@ useEffect(() => {
         <div className="container">
           <h1>Categories</h1>
           <div className="CategoriesItem">
-            <div className="item" onClick={() => setCategory("phones")}>
+            <div className="item" onClick={() => setCategory("phone")}>
               <img
                 src="//cdn.shopify.com/s/files/1/0649/7868/2052/files/img2_b3d2fa04-49cb-49f1-9c06-eab0ecfd9367.jpg?v=1713494483&width=1920"
                 alt=""
               />
             </div>
-            <div className="item" onClick={() => setCategory("laptops")}>
+            <div className="item" onClick={() => setCategory("laptop")}>
               <img
                 src="//cdn.shopify.com/s/files/1/0649/7868/2052/files/img1_c40f727c-8b81-4a8d-a1ae-a1dccb5d33b1.jpg?v=1712897216&width=1920"
                 alt=""
               />
             </div>
-            <div className="item" onClick={() => setCategory("watches")}>
+            <div className="item" onClick={() => setCategory("watch")}>
               <img
                 src="//cdn.shopify.com/s/files/1/0649/7868/2052/files/img-1_6c690fda-3f8d-4d21-8df8-da1ce1966f77.jpg?v=1712892211&width=1920"
                 alt=""
               />
             </div>
-            <div className="item" onClick={() => setCategory("headphones")}>
+            <div className="item" onClick={() => setCategory("headphone")}>
               <img
                 src="//cdn.shopify.com/s/files/1/0649/7868/2052/files/img1_7eddaad2-c74f-4c5b-a690-e5c0d1595da6.jpg?v=1712891954&width=1920"
                 alt=""

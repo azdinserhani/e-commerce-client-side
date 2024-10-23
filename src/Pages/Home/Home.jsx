@@ -24,6 +24,8 @@ const Home = () => {
         setPopProducts(popProduct.data.data.products);
         setRecProducts(recProducts.data.data.products);
       } catch (error) {
+        console.log(error);
+        
         setErr(err.message || "something was wrong");
       } finally {
         setLoading(false);

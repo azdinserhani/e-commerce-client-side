@@ -1,3 +1,5 @@
+@import "../../Style.scss";
+
 .footer {
   .wrapper {
     width: 1366px;
@@ -5,6 +7,13 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    @include mobile {
+      width: 100vw;
+      flex-direction: column;
+      gap: 20px;
+      
+      padding: 50px;
+    }
     .item {
       flex: 1;
       display: flex;
@@ -13,32 +22,32 @@
       hr {
         width: 10%;
       }
-      a{
+      a {
         color: #837878bf;
         cursor: pointer;
-        transition: 0.5s all  ease;
-        &:hover{
-            color: black;
-            transform: translateX(10px);
+        transition: 0.5s all ease;
+        &:hover {
+          color: black;
+          transform: translateX(10px);
         }
       }
-      .icons{
+      .icons {
         display: flex;
         gap: 15px;
-        .icon{
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            border: 1px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.5s all ease;
-            cursor: pointer;
-            &:hover{
-                background-color: black;
-                color: white;
-            }
+        .icon {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          border: 1px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.5s all ease;
+          cursor: pointer;
+          &:hover {
+            background-color: black;
+            color: white;
+          }
         }
       }
     }
