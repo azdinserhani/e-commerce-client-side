@@ -75,9 +75,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="categoryContainer">
-          {/* <div className="sideBar">
-            <SideBar />
-          </div> */}
+         
           <div className="mainContainer">
             <div className="top">
               <label htmlFor="Featured">Featured</label>
