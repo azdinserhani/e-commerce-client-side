@@ -72,13 +72,7 @@ const Cart = () => {
                     <div className="centre">
                       <h2>Quantity:</h2>
                       <div className="count">
-                        <div className="icon">
-                          <Remove />
-                        </div>
                         <span>{product.quantity}</span>
-                        <div className="icon">
-                          <Add />
-                        </div>
                       </div>
                     </div>
                     <div className="right">

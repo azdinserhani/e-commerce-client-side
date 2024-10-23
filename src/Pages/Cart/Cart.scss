@@ -1,3 +1,5 @@
+@import "../../Style.scss";
+
 .cart {
   margin: 50px 0px;
   .wrapper {
@@ -6,15 +8,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    .head{
+    @include mobile {
+      width: 100vw;
+    }
+    .head {
       display: flex;
       gap: 60%;
       align-items: center;
-      p{
+      p {
         cursor: pointer;
         text-decoration: underline;
-        &:hover{
+        &:hover {
           color: gray;
         }
       }
@@ -22,46 +26,59 @@
     .container {
       display: flex;
       gap: 10px;
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
       .left {
         flex: 3;
-        .empty{
+        .empty {
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
           text-align: center;
-          span{
-          margin-left: 50px;
-          font-size: 20px;
-          text-align: center;
+          span {
+            margin-left: 50px;
+            font-size: 20px;
+            text-align: center;
+          }
+          img {
+            height: 80px;
+            width: 80px;
+          }
         }
-        img{
-          height: 80px;
-          width: 80px;
-        }
-        }
-        
+
         .card {
+          @include mobile {
+            margin: 20px;
+          }
           hr {
             margin: 5px 0px;
           }
           .cardItem {
             display: flex;
+
             .left {
               flex: 1;
               display: flex;
               gap: 5px;
-
-           
+              @include mobile {
+                flex-direction: column;
+              }
               img {
                 height: 200px;
                 width: 150px;
                 object-fit: cover;
                 cursor: pointer;
                 transition: 1s all ease;
-                &:hover{
-                    scale: 0.9;
+                @include mobile {
+                  height: 150px;
+                  width: 100px;
+                }
+                &:hover {
+                  scale: 0.9;
                 }
               }
               .productInfo {
@@ -87,15 +104,12 @@
                 display: flex;
                 height: 40px;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 border-radius: 10px;
                 border: 1px solid #00000066;
                 padding: 0px 10px;
                 span {
                   font-size: 20px;
-                }
-                .icon {
-                  cursor: pointer;
                 }
               }
             }
@@ -105,7 +119,7 @@
               flex-direction: column;
               gap: 10px;
               align-items: end;
-              h3{
+              h3 {
                 font-size: 25px;
               }
               p {
@@ -125,12 +139,12 @@
           display: flex;
           flex-direction: column;
           gap: 50px;
-          p{
+          p {
             font-size: 20px;
             color: gray;
-            span{
-                font-weight: 500;
-                color: black;
+            span {
+              font-weight: 500;
+              color: black;
             }
           }
           button {

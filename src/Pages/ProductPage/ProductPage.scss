@@ -1,3 +1,5 @@
+@import "../../Style.scss";
+
 .productPage {
   margin: 50px 0px;
   .wrapper {
@@ -5,22 +7,27 @@
     margin: auto;
     display: flex;
     gap: 50px;
-
+    @include mobile {
+      width: 100vw;
+      flex-direction: column;
+    }
     .left {
       flex: 1;
-        overflow: hidden;
-        img {
-          transition: 0.5s all ease;
-          cursor: pointer;
+      overflow: hidden;
+      img {
+        transition: 0.5s all ease;
+        cursor: pointer;
         width: 100%;
-        &:hover{
-            scale: 1.5;
+        &:hover {
+          scale: 1.5;
         }
       }
     }
     .right {
       flex: 1;
-
+ @include mobile {
+  padding: 20px;
+    }
       .textContainer {
         display: flex;
         flex-direction: column;
