@@ -1,5 +1,6 @@
+@import "../../Style.scss";
+
 .orderCard {
- 
   height: auto;
   border-radius: 15px;
   border: 1px solid #ccc;
@@ -7,8 +8,10 @@
   display: flex;
   flex-direction: row;
   gap: 40px;
-  // justify-content: space-between;
-  // gap: 20px;
+  justify-content: space-between;
+  @include mobile {
+    flex-direction: column;
+  }
   .top {
     flex: 2;
     display: flex;
@@ -27,6 +30,11 @@
       flex-direction: column;
       margin-left: 50px;
       gap: 10px;
+      @include mobile {
+        width: 100%;
+      margin-left: 0px;
+
+      }
       span {
         font-size: 20px;
         font-weight: bold;
@@ -50,7 +58,6 @@
     }
   }
   .bottom {
-
     display: flex;
     gap: 50px;
     .shippingInfo {

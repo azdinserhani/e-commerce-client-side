@@ -1,9 +1,15 @@
-.orderContainer{
-    width: 1366px;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+@import "../../Style.scss";
+
+.orderContainer {
+  width: 1366px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include mobile {
+    width: 100vw;
+    gap: 10px;
+  }
 }
